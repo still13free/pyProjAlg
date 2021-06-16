@@ -3,19 +3,15 @@
 Количество элементов (n) вводится с клавиатуры.
 """
 
-
-def get_row_sum(n: int, x=1) -> int:
-    row_sum, i = 0, 0
-    while i < n:
-        row_sum += x
-        i += 1
-        x *= -0.5
-    return row_sum
-
+X = -0.5
 
 while True:
-    num = int(input('Введите натуральное число: '))
-    if num > 0:
-        print(f'Сумма {num} элементов ряда: {get_row_sum(num)}\n')
+    number = int(input('Введите натуральное число: '))
+    if number > 0:
+        i, row_sum = 0, 0
+        while i < number:
+            row_sum += X ** i
+            i += 1
+        print(f'Сумма {number} элементов ряда: {row_sum}\n')
     else:
         break

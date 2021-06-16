@@ -13,14 +13,13 @@ def seq_n(n: int) -> int:
 
 
 num = int(input('Введите натуральное число: '))
-if num > 0:
-    left = seq_n(num)
-    right = num * (num + 1) // 2
-    print(f'1+2+...+n = n(n+1)/2 is {left == right}')
+left = seq_n(num)
+right = num * (num + 1) // 2
+print(f'1+2+...+n = n(n+1)/2 is {left == right}')
 
 
 """
-оригинальная версия с тестирование через бесконечный цикл
+оригинальная версия с тестированием через бесконечный цикл
 
 def qed(n: int) -> (int, int):  # quod erat demonstrandum
     left, right = 0, 0

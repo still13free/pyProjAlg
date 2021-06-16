@@ -5,9 +5,9 @@
 
 BEGIN = 32
 END = 127
-IN_ROW = 10
+PER_ROW = 10
 
 for i, num in enumerate(range(BEGIN, END + 1)):
-    if not i % IN_ROW:
+    if not i % PER_ROW:
         print()
     print(f'{num}:"{chr(num)}"', end='\t\t')

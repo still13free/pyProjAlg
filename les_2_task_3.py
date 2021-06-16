@@ -5,18 +5,13 @@
 
 BASE = 10
 
-
-def reverse_number(number: int) -> int:
-    reverse = 0
-    while number > 0:
-        reverse = reverse * BASE + number % BASE
-        number //= BASE
-    return reverse
-
-
 while True:
-    num = int(input('Введите натуральное число: '))
-    if num > 0:
-        print(f'Обратное число: {reverse_number(num)}\n')
+    number = int(input('Введите натуральное число: '))
+    if number > 0:
+        reverse = 0
+        while number > 0:
+            reverse = reverse * BASE + number % BASE
+            number //= BASE
+        print(f'Обратное число: {reverse}\n')
     else:
         break

@@ -3,12 +3,14 @@
 Вывести на экран это число и сумму его цифр.
 """
 
+BASE = 10
+
 
 def sum_of_num(number: int) -> int:
     sum_num = 0
     while number > 0:
-        sum_num += number % 10
-        number //= 10
+        sum_num += number % BASE
+        number //= BASE
     return sum_num
 
 
