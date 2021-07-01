@@ -56,7 +56,7 @@ def multiplication(a: deque, b: deque, surplus=0) -> deque:
             n = allowed_numbers[n]
             spam.appendleft(n)
         if surplus != 0:
-            spam.appendleft(str(surplus))
+            spam.appendleft(allowed_numbers[surplus])
             surplus = 0
         for k in range(i):
             spam.append('0')
